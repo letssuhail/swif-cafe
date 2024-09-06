@@ -143,92 +143,16 @@ class _ProductDetailState extends State<ProductDetail> {
                               ],
                             ),
                           )
-
-                          // Container(
-                          //   // width: 53,
-                          //   height: 30,
-                          //   decoration: BoxDecoration(
-                          //     color: Colors.grey[300],
-                          //     borderRadius: BorderRadius.circular(10),
-                          //   ),
-                          //   child: Row(
-                          //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          //     children: [
-                          //       SizedBox(
-                          //         width: 10,
-                          //       ),
-                          //       Text(
-                          //         '1',
-                          //         style: TextStyle(
-                          //           fontSize: 18,
-                          //           fontWeight: FontWeight.w700,
-                          //           color: Colors.grey[700],
-                          //         ),
-                          //       ),
-                          //       SizedBox(
-                          //         width: 10,
-                          //       ),
-                          // Container(
-                          //   color: Colors.grey[700],
-                          //   height: double.infinity,
-                          //   width: 2,
-                          // ),
-                          //       GestureDetector(
-                          //         onTap: () {
-                          //           Center(
-                          //             child: DropdownButton<String>(
-                          //               value: _selectedQuantity,
-                          //               items: <String>['1', '2', '3', '4', '5']
-                          //                   .map((String value) {
-                          //                 return DropdownMenuItem<String>(
-                          //                   value: value,
-                          //                   child: Text(
-                          //                     value,
-                          //                     style: TextStyle(
-                          //                       fontSize: 18,
-                          //                       fontWeight: FontWeight.w700,
-                          //                       color: Colors.grey[700],
-                          //                     ),
-                          //                   ),
-                          //                 );
-                          //               }).toList(),
-                          //               onChanged: (String? newValue) {
-                          //                 setState(() {
-                          //                   _selectedQuantity = newValue!;
-                          //                 });
-                          //               },
-                          //               underline: Container(),
-                          //               icon: Icon(
-                          //                 Icons.keyboard_arrow_down_rounded,
-                          //                 size: 30,
-                          //                 color: Colors.grey[700],
-                          //               ),
-                          //             ),
-                          //           );
-                          //         },
-                          //         child: Icon(
-                          //           Icons.keyboard_arrow_down_rounded,
-                          //           size: 30,
-                          //           color: Colors.grey[700],
-                          //         ),
-                          //       ),
-
-                          //       SizedBox(
-                          //         width: 2,
-                          //       ),
-                          //     ],
-                          //   ),
-                          // ),
                         ],
                       ),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       // Latte Description
                       const Text(
                         'Caffé latte is a rich coffee made up of one or two shots of espresso, '
                         'steamed milk and a final thin layer of foamed milk on top.',
                         style: TextStyle(color: Colors.white60, fontSize: 10),
                       ),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       // Cup Filling Choice
                       Text(
                         'Choice of Cup Filling',
@@ -238,7 +162,7 @@ class _ProductDetailState extends State<ProductDetail> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
 
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -271,9 +195,9 @@ class _ProductDetailState extends State<ProductDetail> {
                           _buildToggleButton('Oat Milk'),
                         ],
                       ),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       // Sugar Options
-                      Text(
+                      const Text(
                         'Choice of Sugar',
                         style: TextStyle(
                           color: Colors.white,
@@ -281,7 +205,7 @@ class _ProductDetailState extends State<ProductDetail> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       Wrap(
                         spacing: 10,
                         children: [
@@ -291,7 +215,7 @@ class _ProductDetailState extends State<ProductDetail> {
                           _buildToggleButton('No Sugar'),
                         ],
                       ),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       // High Priority and Submit Button
                     ],
                   ),
@@ -325,7 +249,7 @@ class _ProductDetailState extends State<ProductDetail> {
                                   value ?? false; // Update the checkbox state
                             });
                           },
-                          activeColor: Color(0xff48984c),
+                          activeColor: const Color(0xff48984c),
                         ),
                         const Text(
                           'High Priority',
@@ -385,7 +309,7 @@ class _ProductDetailState extends State<ProductDetail> {
             top: 40, // Adjust the top position if needed
             left: 10, // Adjust the left position if needed
             child: IconButton(
-              icon: Icon(
+              icon: const Icon(
                 Icons.arrow_back_ios,
                 color: Colors.white,
                 size: 20,
@@ -419,26 +343,11 @@ class _ProductDetailState extends State<ProductDetail> {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Center(
               child: Text(title,
-                  style: TextStyle(color: Colors.white, fontSize: 10)),
+                  style: const TextStyle(color: Colors.white, fontSize: 10)),
             ),
           ),
         ),
       ),
-      // ElevatedButton(
-      //   onPressed: () {
-      //     setState(() {
-      //       _activeChoice = title;
-      //     });
-      //   },
-      //   style: ElevatedButton.styleFrom(
-      //     backgroundColor:
-      //         _activeChoice == title ? Colors.green : Colors.white10,
-      //     shape: RoundedRectangleBorder(
-      //       borderRadius: BorderRadius.circular(5),
-      //     ),
-      //   ),
-      //   child: Text(title, style: TextStyle(color: Colors.white, fontSize: 10)),
-      // ),
     );
   }
 
@@ -460,14 +369,14 @@ class _ProductDetailState extends State<ProductDetail> {
               activeColor: Colors.white,
               inactiveThumbColor: Colors.white,
               activeTrackColor:
-                  Color.fromARGB(255, 3, 255, 11).withOpacity(0.5),
+                  const Color.fromARGB(255, 3, 255, 11).withOpacity(0.5),
             ),
           ),
         ),
-        SizedBox(width: 10),
+        const SizedBox(width: 10),
         Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
             fontSize: 16,
             fontWeight: FontWeight.w500,
